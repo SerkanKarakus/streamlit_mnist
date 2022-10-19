@@ -7,6 +7,7 @@ from tensorflow.keras import Model
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 st.title("Mnist Digit Recognition")
+
 col1, col2 = st.columns([1,1])
 loaded_model=load_model('cnn-mnist-new.h5')
 
@@ -28,7 +29,7 @@ with col1:
         img = cv2.resize(canvas_result.image_data,(28,28))
         img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         img = np.expand_dims(img, axis=0)
-        test_img = img.reshape((1,28,28,1))
+        test_img = img.reshape((1,28,28,1))/255
 
 with col2:
     if pred_button:

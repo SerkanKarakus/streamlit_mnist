@@ -3,9 +3,7 @@ import cv2
 import streamlit as st 
 from streamlit_drawable_canvas import st_canvas
 import plotly.graph_objects as go
-from tensorflow.keras import Model
-from tensorflow.keras.models import load_model
-from tensorflow.keras.preprocessing import image
+from keras.models import load_model
 st.title("Mnist Digit Recognition")
 
 col1, col2 = st.columns([1,1])

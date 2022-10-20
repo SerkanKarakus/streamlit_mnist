@@ -1,3 +1,4 @@
+--upgrade pip
 numpy
 streamlit==1.10.0
 plotly
